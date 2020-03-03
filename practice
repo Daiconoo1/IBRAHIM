@@ -1,0 +1,22 @@
+class portfolio:
+    price = 500
+    def __init__(self,name, asset, divert, quantity):
+        asset = 0
+        quantity = 0
+        name = name
+    def getasset (self):
+        self.asset = asset
+        self.quantity = quantity
+        self.name = name
+    def invest (self):
+        asset = (asset + quantity) * price
+        return asset
+    def divert (self):
+        divert = (invest - quantity) * price
+        return divert
+    
+    
+        
+        
+        
+    
