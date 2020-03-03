@@ -1,0 +1,10 @@
+price = 500
+class portfolio:
+    def __init__(self, asset, quantity):
+        asset = 0
+        quantity = 0
+    def getasset (self):
+        self.asset = asset
+        self.quantity = quantity
+    def asset (self)
+    
