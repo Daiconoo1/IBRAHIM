@@ -1,3 +1,5 @@
+priceList = ({'egg':2,'rice':4,'flour':9})
+discountPrices = ({'egg':1,'flour':5})
 class shopping:
     def __init__(self, basket={}):
         self.__basket=basket
@@ -6,4 +8,23 @@ class shopping:
             raise ValueError ('Item not in basket')
         return self.__basket[item]
     def addtobasket (self,item,qty):
-        self.__basket[item]
+        if qty<0:
+            raise ValueError ('Negative qty is not allowed')
+        self.__basket[item] = self.getbasket + qty
+    def removefrombasket (self, item, qty):
+        if qty<0:
+            raise ValueError ('Negative qty is not allowed')
+        self.__basket[item] = self.getbasket - qty
+    def value (self):
+        total = 0
+        for k,v in self.__basket.item():
+            if self.__basket[item] in discountPrices:
+                total+= v * discountPrices[k]
+            if self.__basket[item] in priceList:
+                total+= v * priceList[k]
+    def sort (shopping):
+        for i in range (len(shopping)-1,0,-1):
+            for j in range (len(shopping)-1-i):
+                if shopping[j].value() < shopping[j+1].value():
+                    shopping[j],shopping[j+1] = shopping[j+1],shopping[j]
+        return shopping
