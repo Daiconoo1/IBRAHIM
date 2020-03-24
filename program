@@ -1,0 +1,9 @@
+class shopping:
+    def __init__(self, basket={}):
+        self.__basket=basket
+    def getbasket(self,item):
+        if item not in self.__basket:
+            raise ValueError ('Item not in basket')
+        return self.__basket[item]
+    def addtobasket (self,item,qty):
+        self.__basket[item]
