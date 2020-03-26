@@ -1,0 +1,5 @@
+priceList =({'Egg':2, 'Rice':4, 'Flour':6})
+discountCode=({''})
+class shopping_basket:
+    def __init__(self, basket={}):
+        self.__basket = basket
