@@ -1,6 +1,6 @@
 priceList =({'Egg':2, 'Rice':4, 'Flour':6})
 discountPrice=({'Egg':1, 'Flour':3})
-class shopping_basket:
+class shopping:
     def __init__(self, basket={}):
         self.__basket = basket
     def getbasket(self, item):
@@ -12,5 +12,13 @@ class shopping_basket:
         for k,v in self.__basket.items():
             if k in discountPrice and priceList:
                 priceList[k]=discountPrice[k]
-                total+= v * priceList[k]
+                total+= v * priceList[k]             
+            elif k in priceList:
+                total+=v*priceList[k]
             return total
+    def sort (shopping):
+        for i in range (len(shopping)-1,0,-1):
+            for j in range (len(shopping)-1-i):
+                if shopping[j].value() < shopping[j+1].value():
+                    shopping[j],shopping[j+1] = shopping[j+1],shopping[j]
+        return shopping
