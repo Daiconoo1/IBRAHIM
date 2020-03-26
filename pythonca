@@ -1,5 +1,5 @@
 priceList =({'Egg':2, 'Rice':4, 'Flour':6})
-discountCode=({'Egg':1, 'Flour':3})
+discountPrice=({'Egg':1, 'Flour':3})
 class shopping_basket:
     def __init__(self, basket={}):
         self.__basket = basket
@@ -9,9 +9,8 @@ class shopping_basket:
         return self.__basket[item]
     def value (self):
         total = 0
-        global priceList[key]=q
-        global discountCode = w
         for k,v in self.__basket.items():
-            if self.__basket[item] in discountCode and pricelist:
-                priceList[k]=discountPrices[k]
+            if k in discountPrice and priceList:
+                priceList[k]=discountPrice[k]
                 total+= v * priceList[k]
+            return total
